@@ -29,7 +29,15 @@ a{
 
 #pkfire{
     float: right;
+    font-family: 'Allerta Stencil';
+    font-size: 3vw;
 }
+
+#pkthunder{
+    font-family: 'Allerta Stencil';
+    font-size: 3vw;
+}
+
 
 
 button{
@@ -61,18 +69,23 @@ button:hover{
 }
 
 .falcon>div{
-    background-color: rgba(59, 59, 59, 0.5);
+    background-color: rgba(209, 209, 209, 0.459);
     margin: 1vw;
+    padding : 0vw 1vw;
     text-align: center;
     line-height: 4vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
     cursor: pointer;
     border-radius: 2vw;
+    border: 0.2vw solid white;
+    color: rgb(0, 0, 0);
 }
 
-#f_punch{
-    background-color: rgba(0, 0, 0, 0.562);
+.falcon>div>h2{
+    border-bottom: 0.15vw solid white;
 }
+
+
 
 .falcon>div>a:active>div#fpunch{
     display: block;
