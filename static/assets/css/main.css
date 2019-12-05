@@ -149,6 +149,10 @@ a{
 
 #samus th{
     padding: 1vw 1vw;
+    cursor: pointer;
+}
+#samus th:hover{
+    background: rgba(255, 255, 255, .2);
 }
 
 #samus th + th{
