@@ -23,13 +23,8 @@ a{
 
 #pkfire{
     float: right;
-    width: 15%;
 }
 
-#pkfire>img{
-    width: 15%;
-    margin-left: 2vw;
-}
 
 button{
     padding : 1vw 1vw;
@@ -110,7 +105,6 @@ a#side_b>h1{
 }
 
 #samus{
-    display:none;
     width: 48%;
     background-color: rgb(148, 6, 6);
 }
@@ -135,10 +129,19 @@ th{
 }
 
 #missile{
+    height: 0vh;
+}
+
+#gun{
+    height: 0vh;
+}
+
+#samus>#missile:target{
+    background-color: orange;
     height: 100vh;
 }
 
-#samus:target{
-    display: block;
+#samus>#gun:target{
+    background-color: pink;
+    height: 100vh;
 }
-
