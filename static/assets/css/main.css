@@ -1,0 +1,125 @@
+/* GENERAL */
+body{
+    background-color: rgb(185, 182, 182);
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.ganon{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* NAVBAR */
+
+.ness{
+    background-color: rgb(51, 51, 51);
+    border: 0.1vw solid white;
+}
+
+#pkfire{
+    float: right;
+}
+
+button{
+    padding : 1vw 1vw;
+    background-color: rgb(51, 51, 51);
+    border: none;
+    border-left: 0.1vw solid white;
+    border-right: 0.1vw solid white;
+    color: white;
+    font-size: 2vw;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.3s;
+    padding: 1vw 2vw;
+}
+
+
+
+.falcon{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4vw;
+    width: 47%;
+    margin-left: 5%;
+   
+}
+
+.falcon>div{
+    background-color: rgba(59, 59, 59, 0.5);
+    width: 90%;
+    margin: 1vw;
+    text-align: center;
+    line-height: 4vw;
+    font-size: 2vw;
+    cursor: pointer;
+}
+
+#f_punch{
+    background-color: rgb(143, 27, 27);
+}
+
+.falcon>div>a:active>div#fpunch{
+    display: block;
+}
+
+a#side_b{
+    width: 20%;
+    position: fixed;
+    cursor: pointer;
+    top: 32vw;
+    left: 75%;
+    background-color: rgba(59, 59, 59, 0.747);
+    border-radius: 2vw;
+}
+
+a#side_b:hover{
+    background-color: rgb(59, 59, 59);
+    transition-duration: 0.2s;
+}
+
+a#side_b>img{
+    width: 35%;
+    display: block;
+    margin: auto;
+}
+
+a#side_b>h1{
+    font-size: 2vw;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.samus{
+    width: 48%;
+    background-color: rgb(148, 6, 6);
+}
+
+.samus>table{
+
+    font-size: 1.5vw;
+    color: white;
+}
+
+tr{
+    width: 100%;
+}
+
+th{
+    width: 50%;
+}
+
+#missile{
+    height: 100vh;
+}
+
