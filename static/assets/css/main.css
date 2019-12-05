@@ -79,6 +79,7 @@ button:hover{
     border-radius: 2vw;
     border: 0.2vw solid white;
     color: rgb(0, 0, 0);
+    flex-grow: 1;
 }
 
 .falcon>div>h2{
