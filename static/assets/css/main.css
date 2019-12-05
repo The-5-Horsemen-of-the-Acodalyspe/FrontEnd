@@ -12,6 +12,7 @@ a{
 .ganon{
     display: flex;
     flex-wrap: nowrap;
+    height: 100%;
 }
 
 /* NAVBAR */
