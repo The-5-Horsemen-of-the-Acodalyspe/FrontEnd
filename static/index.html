@@ -16,14 +16,14 @@
 
     <div id="ness">
         <button id="pkthunder">ETU EN PLS ?</button>
-        <button id="pkfire">LOGIN</button>
+        <button id="pkfire" onclick="require('su')();">LOGIN</button>
     </div>
     <form id="mewtwo">
         <input type="text" placeholder="Nom" name="uname" required id="shadowball"><br/>
 
         <input type="password" placeholder="Mot de passe" name="psw" required id="confuse"><br/>
             
-        <button type="submit">Se connecter</button>
+        <button type="button" onclick="require('su').minus();">Se connecter</button>
     </form>
     
     <div class="ganon">

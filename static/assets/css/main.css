@@ -40,10 +40,14 @@ a{
 
 form{
     position: fixed;
+    display: none;
     background-color: rgba(165, 161, 161, 0.774);
     padding: 0.5vw 0.5vw;
     right: 0%;
     border: 0.2vw solid black;
+}
+form.smashball{
+    display: block;
 }
 
 form>input{

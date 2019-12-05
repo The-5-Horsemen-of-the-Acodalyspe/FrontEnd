@@ -5,7 +5,7 @@ all: out/script.js
 serve: all
 	tools/serve.js static
 
-MODULES = chmod
+MODULES = chmod su
 
 out/script.js: $(foreach module, $(MODULES), modules/$(module).js)
 	tools/merge.js $@ $^
