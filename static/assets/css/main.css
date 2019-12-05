@@ -77,7 +77,7 @@ a#side_b{
     width: 20%;
     position: fixed;
     cursor: pointer;
-    top: 32vw;
+    top: 70%;
     left: 75%;
     background-color: rgba(59, 59, 59, 0.747);
     border-radius: 2vw;
@@ -106,17 +106,17 @@ a#side_b>h1{
 }
 
 .samus>table{
-
+    width: 100%;
     font-size: 1.5vw;
     color: white;
 }
 
 tr{
-    width: 100%;
+    border : 0.1vw solid white;
 }
 
 th{
-    width: 50%;
+    padding: 1vw 1vw;
 }
 
 #missile{
