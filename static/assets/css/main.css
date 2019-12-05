@@ -38,7 +38,32 @@ a{
     font-size: 3vw;
 }
 
+form{
+    position: fixed;
+    background-color: rgba(165, 161, 161, 0.774);
+    padding: 0.5vw 0.5vw;
+    right: 0%;
+    border: 0.2vw solid black;
+}
 
+form>input{
+    margin-top: 1vw;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    font-size: 1.5vw;
+    border : 0.1vw solid rgb(0, 0, 0);
+}
+
+form>button{
+    background-color: rgb(0, 0, 0);
+    border : 0.1vw solid white;
+    color: white;
+    display: block;
+    margin : auto;
+    margin-top: 1vw;
+    padding: 0.5vw 3vw;
+    font-size: 1.5vw;
+}
 
 #ness button{
     padding : 1vw 1vw;
@@ -75,7 +100,6 @@ a{
     text-align: center;
     line-height: 4vw;
     font-size: 1.5vw;
-    cursor: pointer;
     border-radius: 2vw;
     border: 0.2vw solid white;
     color: rgb(0, 0, 0);
