@@ -129,16 +129,16 @@ button:hover{
     border-collapse: collapse;
 }
 
-tr{
+#samus tr{
     border : 0.1vw solid white;
 }
 
-th{
+#samus th{
     padding: 1vw 1vw;
 }
 
-#fouet{
-    border-right: 0.1vw solid white;
+#samus th + th{
+    border-left: 0.1vw solid white;
 }
 
 #missile{
