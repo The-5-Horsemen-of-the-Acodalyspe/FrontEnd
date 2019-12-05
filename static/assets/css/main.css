@@ -77,8 +77,8 @@ a#side_b{
     width: 20%;
     position: fixed;
     cursor: pointer;
-    top: 70%;
-    left: 75%;
+    top: 70vh;
+    left: 170vh;
     background-color: rgba(59, 59, 59, 0.747);
     border-radius: 2vw;
 }
