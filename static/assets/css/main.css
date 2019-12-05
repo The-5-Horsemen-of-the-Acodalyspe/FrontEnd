@@ -23,6 +23,12 @@ a{
 
 #pkfire{
     float: right;
+    width: 15%;
+}
+
+#pkfire>img{
+    width: 15%;
+    margin-left: 2vw;
 }
 
 button{
