@@ -1,0 +1,1 @@
+../../../out/script.js
