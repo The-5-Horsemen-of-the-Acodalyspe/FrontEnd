@@ -1,6 +1,6 @@
 /* GENERAL */
 body{
-    background-color: rgb(185, 182, 182);
+    background: linear-gradient(to left, #e66465, #9198e5);
     margin: 0;
 }
 
@@ -17,7 +17,7 @@ a{
 /* NAVBAR */
 
 .ness{
-    background-color: rgb(51, 51, 51);
+    background-color: rgba(51, 51, 51, 0.76);
     border: 0.1vw solid white;
 }
 
@@ -28,7 +28,7 @@ a{
 
 button{
     padding : 1vw 1vw;
-    background-color: rgb(51, 51, 51);
+    background-color: rgba(51, 51, 51, 0);
     border: none;
     border-left: 0.1vw solid white;
     border-right: 0.1vw solid white;
@@ -68,7 +68,7 @@ button:hover{
 }
 
 #f_punch{
-    background-color: rgb(143, 27, 27);
+    background-color: rgba(0, 0, 0, 0.562);
 }
 
 .falcon>div>a:active>div#fpunch{
@@ -106,7 +106,8 @@ a#side_b>h1{
 
 #samus{
     width: 48%;
-    background-color: rgb(148, 6, 6);
+    background-color: rgba(182, 180, 180, 0.527);
+    border: 0.1vw solid white;
 }
 
 #samus>table{
