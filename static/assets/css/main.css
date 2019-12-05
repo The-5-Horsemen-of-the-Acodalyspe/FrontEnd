@@ -109,6 +109,7 @@ a#side_b>h1{
     width: 100%;
     font-size: 1.5vw;
     color: white;
+    border-collapse: collapse;
 }
 
 tr{
@@ -117,6 +118,10 @@ tr{
 
 th{
     padding: 1vw 1vw;
+}
+
+#fouet{
+    border-right: 0.1vw solid white;
 }
 
 #missile{
