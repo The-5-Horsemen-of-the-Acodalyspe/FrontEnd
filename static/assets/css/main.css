@@ -63,6 +63,7 @@ button:hover{
     line-height: 4vw;
     font-size: 2vw;
     cursor: pointer;
+    border-radius: 2vw;
 }
 
 #f_punch{
@@ -80,12 +81,13 @@ a#side_b{
     bottom: 5vh;
     right: 3vw;
     background-color: rgba(59, 59, 59, 0.747);
-    border-radius: 2vw;
+    
 }
 
 a#side_b:hover{
     background-color: rgb(59, 59, 59);
     transition-duration: 0.2s;
+    border-radius: 2vw;
 }
 
 a#side_b>img{
@@ -94,18 +96,20 @@ a#side_b>img{
     margin: auto;
 }
 
+
 a#side_b>h1{
     font-size: 2vw;
     text-align: center;
     color: rgb(255, 255, 255);
 }
 
-.samus{
+#samus{
+    display:none;
     width: 48%;
     background-color: rgb(148, 6, 6);
 }
 
-.samus>table{
+#samus>table{
     width: 100%;
     font-size: 1.5vw;
     color: white;
@@ -126,5 +130,9 @@ th{
 
 #missile{
     height: 100vh;
+}
+
+#samus:target{
+    display: block;
 }
 
