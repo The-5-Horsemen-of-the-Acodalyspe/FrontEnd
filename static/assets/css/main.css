@@ -312,6 +312,7 @@ form [type=submit]{
     padding: 1vw 1vw;
     font-size: 1.5vw;
     width: 70%;
+    margin-top: 2vw;
 }
 
 .rest>button{
