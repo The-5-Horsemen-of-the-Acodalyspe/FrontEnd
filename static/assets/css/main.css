@@ -62,6 +62,7 @@ form{
     right: 0%;
     border: 0.2vw solid black;
     z-index: 3;
+    font-size: 2vw;
 }
 form.smashball{
     display: block;
