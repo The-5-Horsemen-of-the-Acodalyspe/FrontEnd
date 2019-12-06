@@ -22,6 +22,8 @@ exports.minus=async () => {
 		pkmagnet.setAttribute('onclick', "require('su').minusf();");
 		pkfire.classList.add('smashball');
 		punchingbag.classList.remove('smashball');
+		document.querySelector('#mewtwo [type=text]').value='';
+	 document.querySelector('#mewtwo [type=password]').value='';
 		exports.minusl=login;
 		exports.minusg=0;
 	} else {
