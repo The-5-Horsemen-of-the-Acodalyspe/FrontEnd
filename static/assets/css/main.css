@@ -294,11 +294,11 @@ div#gun{
     height: 100%;
 }
 
-#rest{
+.rest{
     width: 100%;
 }
 
-#rest>input, #rest>button{
+.rest>input, .rest>button{
     background-color: rgb(212, 211, 211);
     color: black;
     border: 0.1vw solid black;
@@ -307,7 +307,7 @@ div#gun{
     width: 70%;
 }
 
-#rest>button{
+.rest>button{
     width: 24%;
 }
 
