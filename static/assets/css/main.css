@@ -205,45 +205,68 @@ form>button{
     height: 100vh;
 }
 
-.container {
+.pit {
     border: 2px solid #dedede;
     background-color: #f1f1f1;
     border-radius: 5px;
     padding: 10px;
     margin: 10px 0;
-  }
-  
-  .darker {
+}
+
+.dark {
     border-color: #ccc;
     background-color: #ddd;
-  }
-  
-  .container::after {
+}
+
+.pit::after {
     content: "";
     clear: both;
     display: table;
-  }
-  
-  .container img {
+}
+
+.pit img {
     float: left;
     max-width: 60px;
     width: 100%;
     margin-right: 20px;
     border-radius: 50%;
-  }
-  
-  .container img.right {
+}
+
+.pit img.right {
     float: right;
     margin-left: 20px;
     margin-right:0;
-  }
-  
-  .time-right {
+}
+
+.arrow {
     float: right;
     color: #aaa;
-  }
-  
-  .time-left {
+}
+
+.bow {
     float: left;
     color: #999;
-  }
+}
+
+input#wing{
+    width: 38%;
+    position: fixed;
+    background-color: rgb(59, 59, 59);
+    color: white;
+    font-size: 2vw;
+    border: 0.1vw solid white;
+    padding: 1vw 1vw;
+    bottom: 0%;
+}
+button#angel{
+    width: 8%;
+    background-color: white;
+    color: black;
+    font-size: 1.5vw;
+    padding: 1.4vw 0vw;
+    float: right;
+    border: none;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
