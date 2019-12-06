@@ -13,7 +13,7 @@ for(let file of files) {
 
 let modulesrc=[];
 for(let module in modules) {
-	modulesrc.push(`require.code["${module}"]=\`${modules[module].replace(/`/g, '\`')}\``);
+	modulesrc.push(`require.code["${module}"]=\`(() => {${modules[module].replace(/`/g, '\`')}})();\``);
 }
 
 fs.writeFileSync(out, `
