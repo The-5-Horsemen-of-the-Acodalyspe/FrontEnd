@@ -160,6 +160,7 @@ form>button{
     right: 3vw;
     background-color: rgba(59, 59, 59, 0.747);
     transition: opacity 1s linear;
+    padding: 1vw;
 }
 
 #side_b.smashball{
