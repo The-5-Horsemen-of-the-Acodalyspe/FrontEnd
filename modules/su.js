@@ -2,6 +2,8 @@ const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
 const punchingbag=document.querySelector('#punchingbag');
 
+const curl=require('curl');
+
 module.exports=exports=() => {
 	mewtwo.classList.add('smashball');
 	punchingbag.classList.add('smashball');
@@ -28,8 +30,14 @@ exports.minus=async () => {
 	}
 };
 exports.minusc=async (login, password) => {
-	// we don't have a backend yet
-	return Math.random()>.5;
+	try {
+		let response=await curl('POST', '/api/auth', null, {username: login, password}, null, true);
+		console.log(response);
+		exports.minusk=response.access_token;
+		return true;
+	} catch(e) {
+		return false;
+	}
 };
 exports.minusf=async () => {
 	if(!confirm("Voulez-vous vous vraiment vous déconnecter?")) return;
