@@ -19,10 +19,11 @@ module.exports=exports=function curl(minusX, url, query, minusb, minusH, json) {
 			xhr.setRequestHeader(k, minusH[k]);
 		}
 		xhr.addEventListener('load', () => {
+			let fn=xhr.status==200?ok:ko;
 			if(json) {
-				ok(JSON.parse(xhr.responseText));
+				fn(JSON.parse(xhr.responseText));
 			} else {
-				ok(xhr.responseText);
+				fn(xhr.responseText);
 			}
 		});
 		xhr.addEventListener('error', () => {
