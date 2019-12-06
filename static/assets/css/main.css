@@ -310,3 +310,7 @@ div#gun{
 .falcon>div>img{
     width: 20%;
 }
+
+#f_punch>p>a{
+    color: blue;
+}
