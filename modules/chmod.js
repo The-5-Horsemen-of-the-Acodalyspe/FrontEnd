@@ -14,7 +14,7 @@ exports.plusr=async () => {
 	document.querySelector('#missile').classList.add('smashball');
 	let user=await require('xdotool')();
 	try {
-		let a=curl('PUT', '/api/user', null, user, {'Authorization': 'jwt '+su.minusk}, true);
+		let a=curl('PUT', '/api/user', null, user, {'Authorization': 'jwt '+su.minusq}, true);
 		console.log(a);
 	} catch(e) {
 		console.error(e);

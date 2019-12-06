@@ -58,7 +58,7 @@ exports.minusc=async (login, password) => {
 	try {
 		let response=await curl('POST', '/api/auth', null, {username: login, password}, null, true);
 		console.log(response);
-		exports.minusk=response.access_token;
+		exports.minusq=response.access_token;
 		return true;
 	} catch(e) {
 		return false;
