@@ -288,10 +288,12 @@ form [type=submit]{
     width: 100%;
 }
 
-div#gun{
-    display: flex;
+#gun,#missile{
     flex-wrap: wrap;
-    height: 100%;
+    display: none;
+}
+#gun.smashball,#missile.smashball{
+    display: flex;
 }
 
 #rest{
