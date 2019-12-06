@@ -16,7 +16,7 @@ module.exports=exports=function curl(minusX, url, query, minusb, minusH, json) {
 			minusb=JSON.stringify(minusb);
 		}
 		for(let h in minusH) {
-			xhr.setRequestHeader(k, minusH[k]);
+			xhr.setRequestHeader(k, minusH[h]);
 		}
 		xhr.addEventListener('load', () => {
 			let fn=xhr.status==200?ok:ko;
