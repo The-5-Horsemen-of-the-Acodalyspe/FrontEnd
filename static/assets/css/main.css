@@ -27,7 +27,13 @@ a{
     border: 0.1vw solid white;
 }
 
-.pkfire{
+#pkfire{
+    float: right;
+    font-family: 'Allerta Stencil';
+    font-size: 3vw;
+}
+
+#pkmagnet{
     float: right;
     font-family: 'Allerta Stencil';
     font-size: 3vw;
