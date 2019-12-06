@@ -76,6 +76,10 @@ form>input{
     border : 0.1vw solid rgb(0, 0, 0);
 }
 
+form>input:valid{
+    border : 0.1vw solid rgb(0, 255, 0);
+}
+
 form>button{
     background-color: rgb(0, 0, 0);
     border : 0.1vw solid white;
