@@ -233,11 +233,10 @@ form [type=submit]{
 
 #samus>#missile.smashball{
 
-    height: 100vh;
+    height: 100%;
 }
 
 #samus>#gun.smashball{
-    background-color: pink;
     height: 100vh;
 }
 
