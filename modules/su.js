@@ -2,11 +2,13 @@ const pkmagnet=document.querySelector('#pkmagnet');
 const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
 const punchingbag=document.querySelector('#punchingbag');
+const shadowball=document.querySelector('#shadowball');
 
 const curl=require('curl');
 
 module.exports=exports=() => {
 	mewtwo.classList.add('smashball');
+	shadowball.focus();
 	punchingbag.classList.add('smashball');
 	punchingbag.setAttribute('onclick', "require('su').minusm();");
 };
@@ -54,4 +56,7 @@ exports.minusm=async () => {
 };
 exports.minusg=0;
 
-console.log('here!');
+mewtwo.addEventListener('submit', e => {
+	e.preventDefault();
+	exports.minus();
+});

@@ -100,6 +100,10 @@ form>button{
     font-size: 1.5vw;
 }
 
+form [type=submit]{
+    display: none;
+}
+
 #ness button{
     padding : 1vw 1vw;
     background-color: rgba(51, 51, 51, 0);

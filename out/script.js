@@ -39,12 +39,17 @@ exports.minusw=() => {
 };
 
 })();`
-require.code["su"]=`(() => {const pkfire=document.querySelector('#pkfire');
+require.code["su"]=`(() => {const pkmagnet=document.querySelector('#pkmagnet');
+const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
 const punchingbag=document.querySelector('#punchingbag');
+const shadowball=document.querySelector('#shadowball');
+
+const curl=require('curl');
 
 module.exports=exports=() => {
 	mewtwo.classList.add('smashball');
+	shadowball.focus();
 	punchingbag.classList.add('smashball');
 	punchingbag.setAttribute('onclick', "require('su').minusm();");
 };
@@ -54,8 +59,9 @@ exports.minus=async () => {
 	if(await exports.minusc(login, password)) {
 		// we are logged in
 		mewtwo.classList.remove('smashball');
-		pkfire.innerText=login;
-		pkfire.setAttribute('onclick', "require('su').minusf();");
+		pkmagnet.innerText=login;
+		pkmagnet.setAttribute('onclick', "require('su').minusf();");
+		pkfire.classList.add('smashball');
 		punchingbag.classList.remove('smashball');
 		exports.minusl=login;
 		exports.minusg=0;
@@ -69,13 +75,20 @@ exports.minus=async () => {
 	}
 };
 exports.minusc=async (login, password) => {
-	// we don't have a backend yet
-	return Math.random()>.5;
+	try {
+		let response=await curl('POST', '/api/auth', null, {username: login, password}, null, true);
+		console.log(response);
+		exports.minusk=response.access_token;
+		return true;
+	} catch(e) {
+		return false;
+	}
 };
 exports.minusf=async () => {
 	if(!confirm("Voulez-vous vous vraiment vous déconnecter?")) return;
-	pkfire.innerText='LOGIN';
-	pkfire.setAttribute('onclick', "require('su')();");
+	pkmagnet.innerText='LOGIN';
+	pkmagnet.setAttribute('onclick', "require('su')();");
+	pkfire.classList.remove('smashball');
 	exports.minusl=undefined;
 };
 exports.minusm=async () => {
@@ -84,7 +97,10 @@ exports.minusm=async () => {
 };
 exports.minusg=0;
 
-console.log('here!');
+mewtwo.addEventListener('submit', e => {
+	e.preventDefault();
+	exports.minus();
+});
 })();`
 require.code["sl"]=`(() => {const never=\`/gonna/give/you/up.mp4\`;
 module.exports=exports=function sl() {
@@ -100,6 +116,42 @@ module.exports=exports=function sl() {
 	} catch(down) {
 		console.error(down);
 	}
+};
+
+})();`
+require.code["curl"]=`(() => {module.exports=exports=function curl(minusX, url, query, minusb, minusH, json) {
+	if(!minusH) minusH={};
+	if(!query) query={};
+	if(!minusb) minusb=null;
+	
+	let paramStr=Object.keys(query)
+		.map(a => encodeURIComponent(a)+'='+encodeURIComponent(query[a]))
+		.join('&');
+	if(paramStr) url+='?'+paramStr;
+	
+	return new Promise((ok, ko) => {
+		let xhr=new XMLHttpRequest();
+		xhr.open(minusX, url, true);
+		if(typeof minusb=='object') {
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			minusb=JSON.stringify(minusb);
+		}
+		for(let h in minusH) {
+			xhr.setRequestHeader(k, minusH[k]);
+		}
+		xhr.addEventListener('load', () => {
+			let fn=xhr.status==200?ok:ko;
+			if(json) {
+				fn(JSON.parse(xhr.responseText));
+			} else {
+				fn(xhr.responseText);
+			}
+		});
+		xhr.addEventListener('error', () => {
+			ko();
+		});
+		xhr.send(minusb);
+	});
 };
 
 })();`
