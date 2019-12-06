@@ -12,12 +12,17 @@
 
 <body>
     <a href="#" onclick="require('chmod').plusx();" id="side_b"><img src="assets/images/aide.png" alt><h1>Besoin d'aide ?</h1></a>
-
+    
     <div id="ness">
         <button id="pkthunder" onclick="window.location.href='#ness'">ETU EN PLS ?</button>
         <button id="pkfire" onclick="require('su')();">REGISTER</button>
         <button id="pkmagnet" onclick="require('su')();">LOGIN</button>
     </div>
+    <table id="link">
+        <tr id="bomb">
+            <th>Accès rapide :</th><th><a href="#hero">Logements</a></th><th><a href="#olimar">Financier</a></th><th><a href="#alph">Santé</a></th><th><a href="#pichu">Juridique</a></th>
+        </tr>
+    </table>
     <form id="mewtwo">
         <input type="text" placeholder="Nom" name="uname" required id="shadowball"><br/>
 
@@ -42,7 +47,7 @@
     <div class="ganon">
         
         <div class="falcon">
-            <div><h2>LOGEMENTS</h2><img src="assets/images/home.png" alt>
+            <div id="hero"><h2>LOGEMENTS</h2><img src="assets/images/home.png" alt>
             <div class="f_punch">
                 <ul>
                    <li><p><a href="https://www.visale.fr">Visale</a> est un dispositif de cautionnement gratuit permetant de garantir les loyers impayés</p></li>
@@ -52,7 +57,7 @@
                 </ul>
                 </div>
             </div>
-            <div><h2>FINANCIER</h2><img src="assets/images/argent.png" alt>
+            <div id="olimar"><h2>FINANCIER</h2><img src="assets/images/argent.png" alt>
                 <div class="f_punch">
                     <ul>
                         <li><p><a href="http://www.caf.fr">la CAF</a> permet de bénéficier d'une aide pour le logement</p></li>
@@ -61,7 +66,7 @@
                     </ul>
                 </div>
             </div>
-            <div><h2>SANTE</h2><img src="assets/images/sante.png" alt>
+            <div id=alph><h2>SANTE</h2><img src="assets/images/sante.png" alt>
                 <div class="f_punch">
                     <ul>
                         <li><p><a href="https://centre-sante.univ-grenoble-alpes.fr/fr/menu-principal/les-etudiants/types-de-consultation/demande-d-amenagements-pour-les-etudiants-en-situation-de-handicap--765540.htm?RH=1537781745083">Des consultations</a> s’adressent aux étudiants présentant une déficience, une incapacité, les plaçant en situation de handicap. Elles ont pour objectif d’en évaluer les désavantages sur le déroulement des études et leurs aménagements éventuels.</p></li>
@@ -70,7 +75,7 @@
                     </ul>
                 </div>
             </div>  
-            <div><h2>JURIDIQUE</h2><img src="assets/images/tribunal.png" alt>
+            <div id="pichu"><h2>JURIDIQUE</h2><img src="assets/images/tribunal.png" alt>
                 <div class="f_punch">
                     <ul>
                         <li><p>Possibilité d'acces a un <a href="https://www.etujuris.fr/la-clinique-du-droit">conseil juridique</a></p></li>

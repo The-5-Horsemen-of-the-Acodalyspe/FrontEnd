@@ -328,3 +328,13 @@ form [type=submit]{
 .f_punch>ul>li>p{
     text-align:left;
 }
+
+table#link{
+    width: 100%;
+}
+
+tr#bomb>th{
+    border: 0.2vw solid white;
+    padding: 1vw 1vw;
+    font-size: 2vw;
+}
