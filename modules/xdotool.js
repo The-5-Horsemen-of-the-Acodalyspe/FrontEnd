@@ -39,12 +39,12 @@ Commençons par votre logement, êtes-vous:
 5) propriétaire
 		`,
 		input: maxi(5),
-		fn: i => user.logement={type: +i}
+		fn: i => user.housing={typeHousing: +i}
 	}, {
-		cond: () => [1, 4, 5].includes(user.logement.type),
-		fn: () => user.logement.prix=null
+		cond: () => [1, 4, 5].includes(user.housing.typeHousing),
+		fn: () => user.housing.price=1
 	}, {
-		cond: () => ![1, 4, 5].includes(user.logement.type),
+		cond: () => ![1, 4, 5].includes(user.housing.typeHousing),
 		message: `
 Quel prix payez vous pour votre (co)location ?
 1) moins de 300€
@@ -54,11 +54,11 @@ Quel prix payez vous pour votre (co)location ?
 5) plus de 600€
 		`,
 		input: maxi(5),
-		fn: i => user.logement.prix=+i
+		fn: i => user.housing.price=+i
 	}, {
 		message: `Sur une échelle de 1 à 5 comment jugeriez l'état et la salubrité de votre logement ?`,
 		input: maxi(5),
-		fn: i => user.logement['salubrité']=+i>2
+		fn: i => user.housing.wholesomeness=+i>2
 	}, {
 		message: `
 quel est votre moyen de transport ?
@@ -69,20 +69,20 @@ quel est votre moyen de transport ?
 5) train
 		`,
 		input: maxi(5),
-		fn: i => user.logement.transport={type: +i}
+		fn: i => user.transport={typeTransport: +i}
 	}, {
 		message: `Combien de temps mettez vous à arriver à votre université ? (en minute)`,
 		input: int,
-		fn: i => user.logement.transport.temps=+i
+		fn: i => user.transport.transportTime=+i
 	}, {
 		message: `A quelle distance êtes-vous de votre université ? (en km)`,
 		input: float,
-		fn: i => user.logement.transport.distance=+i
+		fn: i => user.transport.distance=+i
 	}, {
 		message: `Avez-vous a moins de 3km un moyen de laver votre linge et un supermarché ? O/N`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.logement.transport['accessibilité']=i
+		fn: i => user.transport.needs_proximity=i
 	}, {
 		message: `
 Merci pour ces informations, elle nous aiderons a vous guider vers les aides adéquates.
@@ -98,9 +98,9 @@ Maintenant occupons nous de votre bourse:
 9) je suis sur l'echellon 7 (5612€)
 		`,
 		input: maxi(9),
-		fn: i => user.finance={bourse: +i}
+		fn: i => user.finance={scholarships: +i}
 	}, {
-		cond: () => user.age<30 && [2, 3].includes(user.logement.type),
+		cond: () => user.age<30 && [2, 3].includes(user.housing.typeHousing),
 		message: `
 Vous avez certains prérequis nécessaires pour toucher des APL, touchez vous:
 1) aucune APL
@@ -113,6 +113,9 @@ Vous avez certains prérequis nécessaires pour toucher des APL, touchez vous:
 		input: maxi(6),
 		fn: i => user.finance.APL=+i
 	}, {
+		cond: () => !user.finance.APL,
+		fn: () => user.finance.APL=1
+	}, {
 		message: `
 Entrez le montant d'autres aides que vous pouvez toucher par mois:
 1) aucune
@@ -123,7 +126,7 @@ Entrez le montant d'autres aides que vous pouvez toucher par mois:
 6) plus de 600€
 		`,
 		input: maxi(6),
-		fn: i => user.finance.autres=+i
+		fn: i => user.finance.other=+i
 	}, {
 		message: `
 Combien votre famille vous donne-t-elle par moi ?
@@ -136,12 +139,12 @@ Combien votre famille vous donne-t-elle par moi ?
 7) plus de 600€
 		`,
 		input: maxi(7),
-		fn: i => user.finance.famille=+i
+		fn: i => user.finance.family=+i
 	}, {
 		message: `Travaillez-vous?`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.finance.travail=i
+		fn: i => user.finance.work=i
 	}, {
 		message: `
 Félicitation ! Avec ces infos renseignées vous êtes plus près de la fin de la préparation de votre page personelle.
@@ -150,17 +153,17 @@ Avez-vous accès a un ordinateur ? O/N
 		`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.techno={ordi: i}
+		fn: i => user.technology={hardware: i}
 	}, {
 		message: `Avez-vous acces à une imprimante ? O/N`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.techno.impr=i
+		fn: i => user.technology.printer=i
 	}, {
 		message: `Avez-vous un accès internet personnel ? O/N`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.techno.lolternet=i
+		fn: i => user.technology.internet=i
 	}, {
 		message: `
 Accès technologiques validés.
@@ -168,7 +171,7 @@ Avez-vous un handicap ? O/N
 		`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.handi=i
+		fn: i => user.handicap=i
 	}, {
 		message: `
 Pour les 3 questions suivantes vous pouvez laisser vide si vous ne souhaitez pas répondre.
@@ -176,37 +179,37 @@ Avez vous eu récemment un décès dans votre entourage ? O/N
 		`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.famille={'décès': i}
+		fn: i => user.family={death: i}
 	}, {
 		message: `Vos parents sont-ils divorcés ? O/N`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.famille.divorce=i
+		fn: i => user.family.divorce=i
 	}, {
 		message: `Est-ce que vous ou une personne de votre entourage proche est victime de violence ou d'abus ? O/N`,
 		input: yesno,
 		filter: yesno.filter,
-		fn: i => user.famille.violence=i
+		fn: i => user.family.violence=i
 	}, {
-		cond: () => user.logement.type==1,
-		fn: () => user.famille.distance=0
+		cond: () => user.housing.typeHousing==1,
+		fn: () => user.family.distance=0
 	}, {
-		cond: () => user.logement.type!=1,
+		cond: () => user.housing.typeHousing!=1,
 		message: `A quelle distance du domicile familiale habitez-vous ? (en km)`,
 		input: float,
 		fn: i => user.famille.distance=+i
 	}, {
 		message: `Quelle est votre niveau post-bac ?`,
 		input: int,
-		fn: i => user.etude={niveau: +i}
+		fn: i => user.study={level: +i}
 	}, {
 		message: `Dans combien d'UE/de matières êtes-vous en difficulté ?`,
 		input: int,
-		fn: i => user.etude.plsue=+i
+		fn: i => user.study.douille=+i
 	}, {
 		message: `Quel formation suivez-vous ?`,
 		input: string,
-		fn: i => user.etude.forma=i
+		fn: i => user.study.formation=i
 	}
 ];
 
