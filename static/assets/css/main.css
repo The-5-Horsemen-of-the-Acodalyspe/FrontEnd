@@ -15,7 +15,7 @@ a{
 .ganon{
     display: flex;
     flex-wrap: nowrap;
-    height: 100%;
+    min-height: 100%;
     justify-content: space-between;
     overflow-x: hidden;
 }
@@ -148,8 +148,6 @@ form [type=submit]{
 .falcon>div>h2{
     border-bottom: 0.15vw solid white;
 }
-
-
 
 .falcon>div>a:active>div#fpunch{
     display: block;
@@ -315,4 +313,8 @@ div#gun{
 
 .falcon>div>img{
     width: 20%;
+}
+
+#f_punch>p>a{
+    color: blue;
 }
