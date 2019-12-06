@@ -2,11 +2,13 @@ const pkmagnet=document.querySelector('#pkmagnet');
 const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
 const punchingbag=document.querySelector('#punchingbag');
+const shadowball=document.querySelector('#shadowball');
 
 const curl=require('curl');
 
 module.exports=exports=() => {
 	mewtwo.classList.add('smashball');
+	shadowball.focus();
 	punchingbag.classList.add('smashball');
 	punchingbag.setAttribute('onclick', "require('su').minusm();");
 };
@@ -20,11 +22,16 @@ exports.minus=async () => {
 		pkmagnet.setAttribute('onclick', "require('su').minusf();");
 		pkfire.classList.add('smashball');
 		punchingbag.classList.remove('smashball');
+		document.querySelector('#mewtwo [type=text]').value='';
+	 document.querySelector('#mewtwo [type=password]').value='';
 		exports.minusl=login;
 		exports.minusg=0;
 	} else {
 		// we aren't logged in
 		alert("Login ou mot de passe invalide");
+		let passwordf=document.querySelector('#mewtwo [type=password]');
+		passwordf.value='';
+		passwordf.focus();
 		exports.minusg++;
 		if(exports.minusg==3) {
 			require('sl')();
@@ -54,4 +61,7 @@ exports.minusm=async () => {
 };
 exports.minusg=0;
 
-console.log('here!');
+mewtwo.addEventListener('submit', e => {
+	e.preventDefault();
+	exports.minus();
+});
