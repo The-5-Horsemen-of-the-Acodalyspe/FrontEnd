@@ -1,8 +1,10 @@
 const pkmagnet=document.querySelector('#pkmagnet');
 const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
+const kirby=document.querySelector('#kirby');
 const punchingbag=document.querySelector('#punchingbag');
 const shadowball=document.querySelector('#shadowball');
+const rock=document.querySelector('#rock');
 
 const curl=require('curl');
 
@@ -11,6 +13,20 @@ module.exports=exports=() => {
 	shadowball.focus();
 	punchingbag.classList.add('smashball');
 	punchingbag.setAttribute('onclick', "require('su').minusm();");
+};
+module.exports.minusz=() => {
+	kirby.classList.add('smashball');
+	rock.focus();
+	punchingbag.classList.add('smashball');
+	punchingbag.setAttribute('onclick', "require('su').minusy();");
+};
+module.exports.minusy=() => {
+	kirby.classList.remove('smashball');
+	punchingbag.classList.remove('smashball');
+};
+module.exports.minusk=() => {
+	exports.minusy();
+	alert("Les inscriptions sont désactivées pour le moment");
 };
 exports.minus=async () => {
 	let login=document.querySelector('#mewtwo [type=text]').value;
