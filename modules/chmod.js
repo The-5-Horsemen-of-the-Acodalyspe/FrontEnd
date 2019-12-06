@@ -10,6 +10,7 @@ exports.plusr=() => {
 	exports.plusx();
 	exports.minusw();
 	document.querySelector('#missile').classList.add('smashball');
+	require('xdotool')();
 };
 exports.minusr=() => {
 	document.querySelector('#missile').classList.remove('smashball');
