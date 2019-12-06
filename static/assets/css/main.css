@@ -151,17 +151,19 @@ form>button{
 
 #side_b{
     width: 20%;
+    opacity: 1;
     position: fixed;
     cursor: pointer;
     bottom: 5vh;
     right: 3vw;
     background-color: rgba(59, 59, 59, 0.747);
+    transition: opacity 1s linear;
     padding: 1vw;
-    
 }
 
 #side_b.smashball{
-	display: none;
+	opacity: 0;
+	top: 1000vh;
 }
 
 #side_b:hover{
