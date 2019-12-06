@@ -317,6 +317,10 @@ form [type=submit]{
     width: 20%;
 }
 
-#f_punch>p>a{
+#f_punch>ul>li>p>a{
     color: blue;
+}
+
+#f_punch>ul>li>p{
+    text-align:left;
 }
