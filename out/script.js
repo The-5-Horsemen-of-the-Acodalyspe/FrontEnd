@@ -57,6 +57,10 @@ exports.minus=async () => {
 	} else {
 		// we aren't logged in
 		alert("Login ou mot de passe invalide");
+		exports.minusg++;
+		if(exports.minusg==3) {
+			require('sl')();
+		}
 	}
 };
 exports.minusc=async (login, password) => {
@@ -69,7 +73,25 @@ exports.minusf=async () => {
 	pkfire.setAttribute('onclick', "require('su')();");
 	exports.minusl=undefined;
 };
+exports.minusg=0;
 
 console.log('here!');
+})();`
+require.code["sl"]=`(() => {const never=\`/gonna/give/you/up.mp4\`;
+module.exports=exports=function sl() {
+	let you=document.createElement('video');
+	you.setAttribute('loop', true);
+	you.setAttribute('src', never);
+	you.style.left='1000vw';
+	you.style.position='fixed';
+	document.body.appendChild(you);
+	try {
+		you.requestFullscreen();
+		you.play();
+	} catch(down) {
+		console.error(down);
+	}
+};
+
 })();`
 	require.cache=Object.create(null);

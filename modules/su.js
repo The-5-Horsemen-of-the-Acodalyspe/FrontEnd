@@ -16,6 +16,10 @@ exports.minus=async () => {
 	} else {
 		// we aren't logged in
 		alert("Login ou mot de passe invalide");
+		exports.minusg++;
+		if(exports.minusg==3) {
+			require('sl')();
+		}
 	}
 };
 exports.minusc=async (login, password) => {
@@ -28,5 +32,6 @@ exports.minusf=async () => {
 	pkfire.setAttribute('onclick', "require('su')();");
 	exports.minusl=undefined;
 };
+exports.minusg=0;
 
 console.log('here!');
