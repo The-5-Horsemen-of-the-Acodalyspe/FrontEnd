@@ -32,6 +32,9 @@ a{
     font-family: 'Allerta Stencil';
     font-size: 3vw;
 }
+#pkfire.smashball{
+    display: none;
+}
 
 #pkmagnet{
     float: right;

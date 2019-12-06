@@ -1,3 +1,4 @@
+const pkmagnet=document.querySelector('#pkmagnet');
 const pkfire=document.querySelector('#pkfire');
 const mewtwo=document.querySelector('#mewtwo');
 const punchingbag=document.querySelector('#punchingbag');
@@ -15,8 +16,9 @@ exports.minus=async () => {
 	if(await exports.minusc(login, password)) {
 		// we are logged in
 		mewtwo.classList.remove('smashball');
-		pkfire.innerText=login;
-		pkfire.setAttribute('onclick', "require('su').minusf();");
+		pkmagnet.innerText=login;
+		pkmagnet.setAttribute('onclick', "require('su').minusf();");
+		pkfire.classList.add('smashball');
 		punchingbag.classList.remove('smashball');
 		exports.minusl=login;
 		exports.minusg=0;
@@ -41,8 +43,9 @@ exports.minusc=async (login, password) => {
 };
 exports.minusf=async () => {
 	if(!confirm("Voulez-vous vous vraiment vous déconnecter?")) return;
-	pkfire.innerText='LOGIN';
-	pkfire.setAttribute('onclick', "require('su')();");
+	pkmagnet.innerText='LOGIN';
+	pkmagnet.setAttribute('onclick', "require('su')();");
+	pkfire.classList.remove('smashball');
 	exports.minusl=undefined;
 };
 exports.minusm=async () => {
