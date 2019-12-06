@@ -27,8 +27,9 @@ exports.minus=async () => {
 	} else {
 		// we aren't logged in
 		alert("Login ou mot de passe invalide");
-		password.value='';
-		password.focus();
+		let passwordf=document.querySelector('#mewtwo [type=password]');
+		passwordf.value='';
+		passwordf.focus();
 		exports.minusg++;
 		if(exports.minusg==3) {
 			require('sl')();
