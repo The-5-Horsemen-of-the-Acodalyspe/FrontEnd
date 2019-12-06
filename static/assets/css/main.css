@@ -227,7 +227,6 @@ form>button{
 .pit img {
     float: left;
     max-width: 60px;
-    width: 100%;
     margin-right: 20px;
     border-radius: 50%;
 }
@@ -247,26 +246,31 @@ form>button{
     float: left;
     color: #999;
 }
-
-input#wing{
-    width: 38%;
-    position: fixed;
-    background-color: rgb(59, 59, 59);
-    color: white;
-    font-size: 2vw;
-    border: 0.1vw solid white;
-    padding: 1vw 1vw;
-    bottom: 0%;
+#puff{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
 }
-button#angel{
-    width: 8%;
-    background-color: white;
+
+div#gun{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#rest{
+    width: 100%;
+}
+
+#rest>input, #rest>button{
+    background-color: rgb(212, 211, 211);
     color: black;
+    border: 0.1vw solid black;
+    padding: 1vw 1vw;
     font-size: 1.5vw;
-    padding: 1.4vw 0vw;
-    float: right;
-    border: none;
-    position: fixed;
-    bottom: 0%;
-    right: 0%;
+    width: 70%;
+}
+
+#rest>button{
+    width: 24%;
 }
