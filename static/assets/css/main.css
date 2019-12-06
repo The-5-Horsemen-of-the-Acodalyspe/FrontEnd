@@ -237,7 +237,7 @@ form [type=submit]{
 }
 
 #samus>#gun.smashball{
-    height: 100vh;
+    height: 100%;
 }
 
 .pit {
@@ -282,6 +282,12 @@ form [type=submit]{
     color: #999;
 }
 #puff{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+}
+
+#lucas{
     margin-left: 5%;
     margin-right: 5%;
     width: 100%;
