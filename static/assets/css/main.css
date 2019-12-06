@@ -284,17 +284,15 @@ form [type=submit]{
 #puff{
     margin-left: 5%;
     margin-right: 5%;
-    width: 100%;
 }
 
 #lucas{
     margin-left: 5%;
     margin-right: 5%;
-    width: 100%;
 }
 
 #gun,#missile{
-    flex-wrap: wrap;
+    flex-direction: column;
     display: none;
 }
 #gun.smashball,#missile.smashball{
