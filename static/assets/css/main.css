@@ -204,3 +204,73 @@ form>button{
     background-color: pink;
     height: 100vh;
 }
+
+.pit {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.dark {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.pit::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.pit img {
+    float: left;
+    max-width: 60px;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.pit img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.arrow {
+    float: right;
+    color: #aaa;
+}
+
+.bow {
+    float: left;
+    color: #999;
+}
+#puff{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 100%;
+}
+
+div#gun{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#rest{
+    width: 100%;
+}
+
+#rest>input, #rest>button{
+    background-color: rgb(212, 211, 211);
+    color: black;
+    border: 0.1vw solid black;
+    padding: 1vw 1vw;
+    font-size: 1.5vw;
+    width: 70%;
+}
+
+#rest>button{
+    width: 24%;
+}
