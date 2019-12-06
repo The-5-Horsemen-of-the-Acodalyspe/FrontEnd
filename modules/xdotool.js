@@ -197,7 +197,7 @@ Avez vous eu récemment un décès dans votre entourage ? O/N
 		cond: () => user.housing.typeHousing!=1,
 		message: `A quelle distance du domicile familiale habitez-vous ? (en km)`,
 		input: float,
-		fn: i => user.famille.distance=+i
+		fn: i => user.family.distance=+i
 	}, {
 		message: `Quelle est votre niveau post-bac ?`,
 		input: int,
